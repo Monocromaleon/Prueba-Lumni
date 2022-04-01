@@ -20,7 +20,6 @@ body {
 
 .mainContainer {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   padding: 2.85rem 0;
 }
@@ -81,6 +80,7 @@ li span {
 @media screen and (max-width: 800px) {
   .mainContainer {
     padding: 0 2.3rem 0 6.8rem;
+    flex-direction: column;
   }
   .bold {
     margin-right: 0.2em;
@@ -96,8 +96,14 @@ li span {
     top: 35%;
     right: -2.5%;
   }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
   .mainContainer {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+  }
+  .countryImg {
+    width: 30%;
   }
 }
