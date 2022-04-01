@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.contactUs {
+  text-align: center;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 640px) {
+  .mainContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.countryInfo {
+  width: 60%;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.smallTitle {
+  color: blue;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: blue;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.countryImg {
+  width: 35%;
+  max-width: 340px;
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.imgContainer .backgroundImg {
+  height: 100%;
+  width: 90%;
+  aspect-ratio: 3/2;
+}
+
+.imgContainer .flagImg {
+  width: 30%;
+  position: absolute;
+  top: 30%;
+  right: -5%;
+}
+
+@media screen and (min-width: 640px) {
+  .imgContainer .flagImg {
+    width: 25%;
+    top: 35%;
+    right: -2.5%;
+  }
+}
