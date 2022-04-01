@@ -2,57 +2,64 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Roboto;
 }
 
 html {
   font-size: 62.5%;
 }
 
+body {
+  background-color: #f8f8f8;
+}
+
 .contactUs {
   text-align: center;
+  padding: 2.4rem 0 0 0;
 }
 
 .mainContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 2.85rem 0;
 }
 
-@media screen and (min-width: 640px) {
-  .mainContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+.countryName,
+.contactUs {
+  font-size: 2.4rem;
 }
 
 .countryInfo {
   width: 60%;
 }
 
-.bold {
+.bold,
+.countryName {
   font-weight: 600;
+  margin-right: 0.6rem;
 }
 
 .smallTitle {
-  color: blue;
+  color: #563dff;
+  font-size: 1.6rem;
+  padding: 0.4rem 0;
 }
 
 ul {
-  list-style: none;
+  font-size: 1.6rem;
+  margin-bottom: 1.9rem;
 }
 
-ul li::before {
-  content: "\2022";
-  color: blue;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+li::marker {
+  color: #563dff;
 }
-
+li span {
+}
 .countryImg {
-  width: 35%;
+  width: 60%;
   max-width: 340px;
+  margin: 0 3.8rem 0 0;
 }
 
 .imgContainer {
@@ -62,7 +69,6 @@ ul li::before {
 .imgContainer .backgroundImg {
   height: 100%;
   width: 90%;
-  aspect-ratio: 3/2;
 }
 
 .imgContainer .flagImg {
@@ -72,10 +78,26 @@ ul li::before {
   right: -5%;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (max-width: 800px) {
+  .mainContainer {
+    padding: 0 2.3rem 0 6.8rem;
+  }
+  .bold {
+    margin-right: 0.2em;
+  }
+  .countryImg {
+    margin: 2.25rem 0rem 2.25rem 0;
+  }
+  li + li {
+    margin-top: 0.5rem;
+  }
   .imgContainer .flagImg {
-    width: 25%;
+    width: 20%;
     top: 35%;
     right: -2.5%;
+  }
+  .mainContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
